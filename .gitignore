@@ -1,6 +1,6 @@
 # Ignore these files
 .netbeans_automatic_build
-*/nb-configuration.xml
+nb-configuration.xml
 
 # But not these files..
 target/
