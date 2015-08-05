@@ -23,6 +23,7 @@
     
     <modules>
         <module>modules/HelloWorldXml</module>
+        <module>modules/HelloWorld</module>
     </modules>
   
     <build>
