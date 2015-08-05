@@ -14,8 +14,8 @@
     </properties>
     
     <modules>
-        <module>HelloWorld</module>
-        <module>WorldHello</module>
+        <module>modules/HelloWorld</module>
+        <module>modules/WorldHello</module>
     </modules>
   
   <build>
