@@ -1,7 +1,7 @@
 package com.enetwiz.helloworld;
 
-
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -10,11 +10,12 @@ import org.springframework.context.annotation.Configuration;
  */
 // UWAGA: uzywanie konfiguracji przez anotacje wymaga zainstalowania dodatkowej zaleznosci o nazwie: cglib
 @Configuration
+@ComponentScan("com.enetwiz.helloworld")
 public class AppConfig {
     
     @Bean
-    public Hello hello() {
-        return new Hello();
+    public HelloBean helloBean() {
+        return new HelloBean();
     }
     
 }

@@ -14,8 +14,12 @@ public class HelloWorld {
         ApplicationContext context = new AnnotationConfigApplicationContext( AppConfig.class );
         
         // Get bean from context and say hello
-        Hello hello = (Hello) context.getBean("hello");
+        HelloBean hello = (HelloBean) context.getBean("helloBean");
         hello.say();
+        
+        // Get bean from context and say hello
+        HelloComponent helloComponent = (HelloComponent) context.getBean("helloComponent");
+        helloComponent.say();
     }
     
 }
