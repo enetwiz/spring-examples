@@ -15,7 +15,6 @@
     
     <modules>
         <module>modules/HelloWorld</module>
-        <module>modules/WorldHello</module>
     </modules>
   
   <build>
