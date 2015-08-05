@@ -13,11 +13,19 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>3.0.2.RELEASE</version>
+        </dependency>
+    </dependencies>
+    
     <modules>
-        <module>modules/HelloWorld</module>
+        <module>modules/HelloWorldXml</module>
     </modules>
   
-  <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
