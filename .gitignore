@@ -1,0 +1,7 @@
+# Ignore these files
+.netbeans_automatic_build
+*/nb-configuration.xml
+
+# But not these files..
+*/target/*
+!*/target/*.war
