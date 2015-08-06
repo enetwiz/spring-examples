@@ -4,6 +4,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
+ * 
+ * Przyklad konfiguracji za pomoca anotacji (brak pliku XML)
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
