@@ -46,4 +46,5 @@ W kolejnym wierszu:
 
 *Hello hello = (Hello) context.getBean("hello");*
 
-nastepuje odwolanie do referencji obiektu Hello(), ktory zostal utworzony zaraz po uruchomieniu kontekstu aplikacji Springa.
+nastepuje odwolanie do referencji obiektu Hello(), ktory zostal utworzony zaraz po uruchomieniu kontekstu aplikacji Springa na bazie instrukcji z 
+pliku hello.xml.
