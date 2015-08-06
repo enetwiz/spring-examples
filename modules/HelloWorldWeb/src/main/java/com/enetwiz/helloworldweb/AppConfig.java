@@ -13,7 +13,6 @@ import org.springframework.web.servlet.view.JstlView;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-//UWAGA: jezeli chcemy uruchamiac strone bezposrednio przez polecenie "Run" w IDE to nalezy zostawic sobie plik META-INF/context.xml
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.enetwiz.helloworldweb")
