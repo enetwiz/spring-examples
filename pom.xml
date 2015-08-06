@@ -25,6 +25,7 @@
         <module>modules/HelloWorldXml</module>
         <module>modules/HelloWorld</module>
         <module>modules/HelloWorldWeb</module>
+        <module>modules/ComponentScope</module>
     </modules>
   
     <build>
