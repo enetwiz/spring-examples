@@ -47,16 +47,20 @@ Opis dzialania
 Zawiera konfiguracje kontekstu Springa - zarowno w postaci anotacji jak i obiektow konfiguracyjnych.
 
 Anotacja @Configuration - oznacza, ze mamy do czynienia z plikiem konfiguracyjnym (odpowiednik konfiguracyjnego pliku *.xml)
-Anotacja @EnableWebMvc - oznacza ze framework Spring Web MVC bedzie analizowal anotacje (jest to ekwiwalent: \<mvc:annotation-driven\>)
+
+Anotacja @EnableWebMvc - oznacza, ze framework Spring Web MVC bedzie wyszukiwal anotacji typu @Controller i innych anotacji powiazanych ze 
+wzorcem MVC.
+Anotacja @EnableWebMvc jest to ekwiwalentem sekcji: \<mvc:annotation-driven\> dla konfguracji pochodzacej z XML'a.
+
 Anotacja @ComponentScan("com.enetwiz.helloworldweb") - wyszukuje/skanuje klasy oznaczone anotacja @Component w przestrzeni nazw 
 "com.enetwiz.helloworldweb". Po odnalezieniu komponentu zostaje utworzony obiekt o id zgodnym z nazwa klasy. Przykladowo jezeli Spring 
 odnajdzie komponent klasy HelloComponent() wowczas referencja/id tego komponentu nazywac sie bedzie "helloComponent".
 
 Klasa AppConfig() rozszerza adapter WebMvcConfigurerAdapter() (stanowi on klase projektu Spring Web MVC), ktory z kolei jest odpowiedzialny za 
-definiowanie metod zwrotnych w aplikacjach sterowanych przez anotacje. W sytuacji rozszerzania tej klasy konieczne jest uzycie anotacji 
+definiowanie metod zwrotnych (callback method) w aplikacjach sterowanych przez anotacje. W sytuacji rozszerzania tej klasy konieczne jest uzycie anotacji 
 @EnableWebMvc.
 
-Klasa AppConfig() zawiera metode: viewResolver(), ktora tworzy obiekt typu ViewResolver. Obiekt ten jest odpwiedzialny za tworzenie nazw dla 
+Klasa AppConfig() zawiera metode: viewResolver(), ktora tworzy obiekt typu ViewResolver. Obiekt ten jest odpowiedzialny za tworzenie nazw dla 
 poszczegolnych widokow. Jezeli prefix i suffix tego obiektu zostanie skonfigurowany wowczas w metodach kontolera moga byc podawane znacznie 
 uproszczone nazwy widokow.
 
@@ -70,7 +74,8 @@ Klasa rozszerza klase abstrakcyjna AbstractAnnotationConfigDispatcherServletInit
  * ma uzywac konfiguracji z klas oznaczonych adnotacja @Configuration 
  * ma wyeliminowac koniecznosc uzycia pliku konfiguracyjnego aplikacji internetowych tj. web.xml
 
-Poszczegolne metody super klas pozwalaja np. na konfiguracje glownego prefixu do aplikacji np. http://strona.pl/glownyprefix/ .
+Poszczegolne metody super klas (np. getServletMappings()) pozwalaja na konfiguracje glownego prefixu do aplikacji dzieki czemu dostep do 
+aplikacji jest poprzedzony globalnym prefixem: http://strona.pl/glownyprefix/kontroler/akcja
 
 
 **HomeController.java**
@@ -82,22 +87,23 @@ Z kolei kazda metoda powinna miec zdefiniowane zasady mapowania za pomoca anotac
 *@RequestMapping(value = "/nazwapodstrony")*
 
 Metody kontrolera zwracaja nazwy widokow w postaci obiektu String. Jezeli w konfiguracji ustawilismy odpowiedni prefix i suffix wowczas wystaczy 
-podac nazwe pliku z widokiem bez rozszerzenia.
+podac nazwe pliku widoku bez rozszerzenia.
 
 Przykladowo zalozmy ze mamy plik widoku umieszczony w WEB-INF/views/hello.jsp. Po odpowiednim zdefiniowaniu prefixow w klasie konfiguracyjnej 
 (AppConfig.java) metoda naszego kontolera moze wygladac w ten sposob:
 
-*
-@RequestMapping(value = "/nazwapodstrony")
+*@RequestMapping(value = "/nazwapodstrony")
 public String showHello() {
     return "hello";
-}
-*
+}*
 
 **hello.jsp**
 
-Plik widoku, ktory jest zwracany w kontolerze: HomeController.showHello(). 
-Nalezy pamietac aby zawieral on kodowanie oraz definicje tagow w standardzie JavaServer Pages:
+Jest to plik widoku (innymi slowy standardowy dokument HTML zawierajacy znaczniki JSP), ktory jest zwracany w kontolerze "HomeController" 
+przez metode/akcje "showHello()". 
+Nalezy pamietac aby zawieral on kodowanie oraz definicje tagow w standardu JavaServer Pages:
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+Powyzsze 2 definicje wstawiamy na samym poczatku pliku.
