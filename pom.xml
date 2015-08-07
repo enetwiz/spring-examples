@@ -27,6 +27,7 @@
         <module>modules/HelloWorldWeb</module>
         <module>modules/ComponentScope</module>
         <module>modules/SingeltonFactory</module>
+        <module>modules/InitDestroyMethods</module>
     </modules>
   
     <build>
