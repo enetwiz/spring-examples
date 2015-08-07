@@ -13,7 +13,6 @@ public class ExampleComponent {
     
     private String label = "default";
     
-    //opis tego jak to dziala: http://jlaskowski.blogspot.com/2007/01/nie-do-wiary-postconstruct-oraz.html
     @PostConstruct
     public void postConstruct() throws Exception {
         label = "post-construct";
