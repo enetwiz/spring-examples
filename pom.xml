@@ -26,6 +26,7 @@
         <module>modules/HelloWorld</module>
         <module>modules/HelloWorldWeb</module>
         <module>modules/ComponentScope</module>
+        <module>modules/SingeltonFactory</module>
     </modules>
   
     <build>
