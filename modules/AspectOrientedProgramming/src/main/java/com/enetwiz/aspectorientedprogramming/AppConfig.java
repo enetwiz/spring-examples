@@ -12,7 +12,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Configuration
 @ComponentScan("com.enetwiz.aspectorientedprogramming")
 @EnableAspectJAutoProxy
-//TODO: aby wlaczyc ww anotacje potrzebna jest biblioteka aspectjweaver
 public class AppConfig {
     
     @Bean

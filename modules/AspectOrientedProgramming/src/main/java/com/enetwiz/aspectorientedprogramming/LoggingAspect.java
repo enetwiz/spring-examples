@@ -30,13 +30,10 @@ public class LoggingAspect {
     
     @AfterReturning(pointcut = "execution(* ExampleComponent.returnSomething(..))", returning= "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
-
         System.out.println("logAfterReturning() is running!");
         System.out.println("hijacked : " + joinPoint.getSignature().getName());
         System.out.println("Method returned value is : " + result);
         System.out.println("---");
-
     }
-
     
 }
