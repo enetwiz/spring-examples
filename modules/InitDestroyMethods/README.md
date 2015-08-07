@@ -11,7 +11,7 @@ Lista plikow (wg waznosci)
    odnosniki do zaleznosci (sekcja "dependencies"), czyli bibliotek zaleznych, potrzebnych do budowy aplikacji. M.in. Maven pilnuje, aby 
    zaladowana zostala biblioteka Spring'a w okreslonej w pliku POM wersji
  * AppConfig.java - klasa konfiguracyjna Spring'a, ktory odgrywa duze znaczenie przy AOP i wstrzykiwaniu zaleznosci (DI)
- * ExampleComponent.java - przykladowy komponent Springa
+ * ExampleComponent.java - przykladowy komponent Springa z anotacjami umozliwiajacymi zarzadzanie jego cyklem zycia
  * InitDestroyMethods.java - serce aplikacji, czyli plik wykonawczy (zawiera metode main()), ktory pozwala uruchomic aplikacje w kontekscie Springa
 
 
@@ -33,21 +33,21 @@ Zawiera konfiguracje kontekstu Springa.
 
 Anotacja @Configuration - oznacza, ze mamy do czynienia z plikiem konfiguracyjnym (odpowiednik konfiguracyjnego pliku *.xml)
 
-Anotacja @ComponentScan("com.enetwiz.helloworld") - wyszukuje/skanuje klasy oznaczone anotacja @Component w przestrzeni nazw 
-"com.enetwiz.helloworld". Po odnalezieniu komponentu zostaje utworzony obiekt o id zgodnym z nazwa klasy. Przykladowo jezeli Spring 
+Anotacja @ComponentScan("com.enetwiz.initdestroymethods") - wyszukuje/skanuje klasy oznaczone anotacja @Component w przestrzeni nazw 
+"com.enetwiz.initdestroymethods". Po odnalezieniu komponentu zostaje utworzony obiekt o id zgodnym z nazwa klasy. Przykladowo jezeli Spring 
 odnajdzie komponent klasy HelloComponent() wowczas referencja/id tego komponentu nazywac sie bedzie "helloComponent".
 
 
 **ExampleComponent.java**
 
 Komponent Springa, ktory w odroznieniu od beana moze byc wyszukiwany automatycznie po zdefiniowaniu anotacji @ComponentScan()
-Komponent ten zawiera dwie anotacje majace realny wplyw na cykl zycia projektu:
+Komponent ten zawiera dwie dodatkowe anotacje majace realny wplyw na cykl zycia projektu:
 
  * @PostConstruct - metoda oznaczona anotacja @PostConstruct będzie wywolywana po stworzeniu instancji komponentu, po DI, ale przed wykonaniem 
    jego metod
  * @PreDestroy - wywolywana jest przed usunieciem instancji komponentu
 
-Praktycznym sposobem uzycia np. @PreDestroy moze byc zamkniecie zasobow, ktore obiekt otworzyl w czasie swojego dzialania.
+Praktycznym sposobem uzycia metody oznaczonej przez np. @PreDestroy moze byc zamkniecie zasobow, ktore obiekt otworzyl w czasie swojego dzialania.
 
 
 **InitDestroyMethods.java**
@@ -66,6 +66,7 @@ instrukcji zawartych w anotacjach klas.
 
 Wywolanie:
 
-**context.close();**
+*context.close();*
 
-powoduje zamkniecie kontekstu Springa oraz uwolnienie zasobow i wszelkich blokad zalozonych w czasie dzialania kontekstu
+powoduje zamkniecie kontekstu Springa oraz uwolnienie zasobow i wszelkich blokad zalozonych w czasie dzialania kontekstu (inaczej mowiac 
+wywolanie tej metody wymusza zamkniecie aplikacji Springa)
