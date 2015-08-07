@@ -28,6 +28,7 @@
         <module>modules/ComponentScope</module>
         <module>modules/SingeltonFactory</module>
         <module>modules/InitDestroyMethods</module>
+        <module>modules/DependencyInjection</module>
     </modules>
   
     <build>
