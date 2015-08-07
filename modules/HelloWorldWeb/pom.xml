@@ -5,6 +5,7 @@
         <groupId>com.enetwiz</groupId>
         <artifactId>MyExamples</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath><!-- don't remove this -->
     </parent>
     
     <groupId>com.enetwiz</groupId>
