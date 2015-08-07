@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
+//TODO: w readme.md opisz ze mozliwe jest rowiez wstrzykiwanie interfejsow
 public class DependencyInjection {
     
     public static void main(String[] args) {

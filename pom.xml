@@ -29,6 +29,7 @@
         <module>modules/SingeltonFactory</module>
         <module>modules/InitDestroyMethods</module>
         <module>modules/DependencyInjection</module>
+        <module>modules/AspectOrientedProgramming</module>
     </modules>
   
     <build>
