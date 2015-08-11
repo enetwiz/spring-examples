@@ -7,6 +7,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
-    <artifactId>SingeltonFactory</artifactId>
+    <artifactId>SingletonFactory</artifactId>
     <packaging>jar</packaging>
+    <name>SingletonFactory</name>
 </project>

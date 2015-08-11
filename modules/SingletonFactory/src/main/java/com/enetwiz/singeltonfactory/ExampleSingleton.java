@@ -4,20 +4,20 @@ package com.enetwiz.singeltonfactory;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-public class ExampleSingelton {
+public class ExampleSingleton {
     
     private String label = "default";
     
     
-    private ExampleSingelton() {
+    private ExampleSingleton() {
         
     }
     
     private static class ExampleSingeltonHolder {
-        private static ExampleSingelton instance = new ExampleSingelton();
+        private static ExampleSingleton instance = new ExampleSingleton();
     }
     
-    public static ExampleSingelton getInstance() {
+    public static ExampleSingleton getInstance() {
         return ExampleSingeltonHolder.instance;
     }
     

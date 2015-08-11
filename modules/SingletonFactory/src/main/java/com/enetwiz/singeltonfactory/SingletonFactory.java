@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-public class SingeltonFactory {
+public class SingletonFactory {
     
     public static void main(String[] args) {
         
@@ -17,7 +17,7 @@ public class SingeltonFactory {
         ApplicationContext context = new AnnotationConfigApplicationContext( AppConfig.class );
         
         // Create real singelton class instance
-        ExampleSingelton singelton = (ExampleSingelton) context.getBean("exampleSingelton");
+        ExampleSingleton singelton = (ExampleSingleton) context.getBean("exampleSingelton");
         System.out.println( "Object label: " + singelton.getLabel() );
         
     }

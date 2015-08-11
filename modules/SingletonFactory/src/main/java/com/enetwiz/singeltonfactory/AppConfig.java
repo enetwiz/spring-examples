@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     
     @Bean
-    public ExampleSingelton exampleSingelton() {
-        return ExampleSingelton.getInstance();
+    public ExampleSingleton exampleSingelton() {
+        return ExampleSingleton.getInstance();
     }
     
 }
