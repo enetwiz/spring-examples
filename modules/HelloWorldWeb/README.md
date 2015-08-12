@@ -28,11 +28,9 @@ Wymagane zaleznosci
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
  * spring-context - podstawowa biblioteka kontekstow Springa
- * cglib - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania aplikacji (at runtime); jest uzywana glownie w aplikacjach 
-   uzywajacych anotacji (@Configuration) jako konfiguracji
  * servlet-api - biblioteka odpowiedzialna za wyświetlanie dynamicznych stron WWW (tj. przetwarzanie formularzy, forwarding itp.)
- * jsp-api - biblioteka odpowiedzialna za parsowanie i obsluge dokumentow zawierajacych znaczniki JavaServer Pages (JSP)
  * jstl - standardowa biblioteka znacznikow Javy ulatwajaca pisanie stron JSP
+ * jsp-api - biblioteka odpowiedzialna za parsowanie i obsluge dokumentow zawierajacych znaczniki JavaServer Pages (JSP)
 
 
 Opis dzialania
