@@ -27,16 +27,12 @@ Wymagane zaleznosci
 
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
- * [spring-context](http://search.maven.org/#artifactdetails|org.springframework|spring-context|3.2.14.RELEASE|jar) - podstawowa biblioteka 
-   kontekstow Springa
- * [cglib](http://search.maven.org/#artifactdetails|cglib|cglib|3.1|jar) - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania 
-   aplikacji (at runtime); jest uzywana glownie w aplikacjach uzywajacych anotacji (@Configuration) jako konfiguracji
- * [servlet-api](http://search.maven.org/#artifactdetails|javax.servlet|javax.servlet-api|3.1.0|jar) - biblioteka odpowiedzialna za 
-   wyświetlanie dynamicznych stron WWW (tj. przetwarzanie formularzy, forwarding itp.)
- * [jsp-api](http://search.maven.org/#artifactdetails|javax.servlet.jsp|jsp-api|2.2|jar) - biblioteka odpowiedzialna za parsowanie i obsluge 
-   dokumentow zawierajacych znaczniki JavaServer Pages (JSP)
- * [jstl](http://search.maven.org/#artifactdetails|javax.servlet|jstl|1.2|jar) - standardowa biblioteka znacznikow Javy ulatwajaca pisanie 
-   stron JSP
+ * spring-context - podstawowa biblioteka kontekstow Springa
+ * cglib - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania aplikacji (at runtime); jest uzywana glownie w aplikacjach 
+   uzywajacych anotacji (@Configuration) jako konfiguracji
+ * servlet-api - biblioteka odpowiedzialna za wyświetlanie dynamicznych stron WWW (tj. przetwarzanie formularzy, forwarding itp.)
+ * jsp-api - biblioteka odpowiedzialna za parsowanie i obsluge dokumentow zawierajacych znaczniki JavaServer Pages (JSP)
+ * jstl - standardowa biblioteka znacznikow Javy ulatwajaca pisanie stron JSP
 
 
 Opis dzialania

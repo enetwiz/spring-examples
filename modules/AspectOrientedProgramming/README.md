@@ -22,12 +22,9 @@ Wymagane zaleznosci
 
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
- * [spring-context](http://search.maven.org/#artifactdetails|org.springframework|spring-context|3.2.14.RELEASE|jar) - podstawowa biblioteka 
-   kontekstow Springa
- * [aspectjrt](http://search.maven.org/#artifactdetails|org.aspectj|aspectjrt|1.8.6|jar) - biblioteka AspectJ wdrazajaca paradygmat programowania 
-   aspektowego do Javy
- * [aspectjweaver](http://search.maven.org/#artifactdetails|org.aspectj|aspectjweaver|1.8.6|jar) - biblioteka pozwalajaca na automatyczne 
-   laczenie AspectJ ze Springiem za pomoca anotacji (np. anotacji @EnableAspectJAutoProxy)
+ * spring-context - podstawowa biblioteka kontekstow Springa
+ * aspectjrt - biblioteka AspectJ wdrazajaca paradygmat programowania aspektowego do Javy
+ * aspectjweaver - biblioteka pozwalajaca na automatyczne laczenie AspectJ ze Springiem za pomoca anotacji (np. anotacji @EnableAspectJAutoProxy)
 
 
 Opis dzialania

@@ -20,8 +20,7 @@ Wymagane zaleznosci
 
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
- * [spring-context](http://search.maven.org/#artifactdetails|org.springframework|spring-context|3.2.14.RELEASE|jar) - podstawowa biblioteka 
-   kontekstow Springa
+ * spring-context - podstawowa biblioteka kontekstow Springa
 
 Opis dzialania
 --------------

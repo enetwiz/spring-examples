@@ -21,10 +21,9 @@ Wymagane zaleznosci
 
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
- * [spring-context](http://search.maven.org/#artifactdetails|org.springframework|spring-context|3.2.14.RELEASE|jar) - podstawowa biblioteka 
-   kontekstow Springa
- * [cglib](http://search.maven.org/#artifactdetails|cglib|cglib|3.1|jar) - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania 
-   aplikacji (at runtime); jest uzywana glownie w aplikacjach uzywajacych anotacji (@Configuration) jako konfiguracji
+ * spring-context - podstawowa biblioteka kontekstow Springa
+ * cglib - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania aplikacji (at runtime); jest uzywana glownie w aplikacjach 
+   uzywajacych anotacji (@Configuration) jako konfiguracji
 
 
 Opis dzialania

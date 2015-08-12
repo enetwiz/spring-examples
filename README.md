@@ -22,3 +22,4 @@ Lista modulow
  * [InitDestroyMethods](modules/InitDestroyMethods/) - aplikacja pokazuje w jaki sposob mozemy wplywac na cykl zycia obiektu za pomoca anotacji
  * [DependencyInjection](modules/DependencyInjection/) - aplikacja prezentuje technike wstrzykiwania zaleznosci w srodowisku Springa
  * [AspectOrientedProgramming](modules/AspectOrientedProgramming/) - aplikacja pokazuje praktyczne zastosowanie programowania aspektowego z wykorzystaniem AspectJ
+ * [HibernateUsage](modules/HibernateUsage) - aplikacja pokazuje przyklad polaczenia ORM'a Hibernate 4.x ze Springiem
