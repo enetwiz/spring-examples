@@ -38,7 +38,7 @@
         <module>modules/HelloWorld</module>
         <module>modules/HelloWorldWeb</module>
         <module>modules/ComponentScope</module>
-        <module>modules/SingeltonFactory</module>
+        <module>modules/SingletonFactory</module>
         <module>modules/InitDestroyMethods</module>
         <module>modules/DependencyInjection</module>
         <module>modules/AspectOrientedProgramming</module>
