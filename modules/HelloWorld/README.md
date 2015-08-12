@@ -22,8 +22,6 @@ Wymagane zaleznosci
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
  * spring-context - podstawowa biblioteka kontekstow Springa
- * cglib - biblioteka rozszerzajaca klasy i interfejsy w czasie dzialania aplikacji (at runtime); jest uzywana glownie w aplikacjach 
-   uzywajacych anotacji (@Configuration) jako konfiguracji
 
 
 Opis dzialania
