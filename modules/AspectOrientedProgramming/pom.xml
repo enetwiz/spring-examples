@@ -8,8 +8,13 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
+    
+    <groupId>com.enetwiz</groupId>
     <artifactId>AspectOrientedProgramming</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    
+    <name>AspectOrientedProgramming</name>
     
     <dependencies>
         <dependency>
