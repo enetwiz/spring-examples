@@ -10,7 +10,6 @@ import javax.persistence.Table;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-//TODO: zrzuuc tabele z DB
 @Entity
 @Table(name = "entities")
 public class ExampleEntity {

@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-//TODO: opisz problem z stsowaniem interfejsow
 @Repository
 @Transactional
 public class ExampleEntityDao {

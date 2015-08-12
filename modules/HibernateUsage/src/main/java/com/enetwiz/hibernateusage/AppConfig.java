@@ -18,7 +18,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-// UWAGA: uzywanie konfiguracji przez anotacje wymaga zainstalowania dodatkowej zaleznosci o nazwie: cglib
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.enetwiz.hibernateusage")
@@ -27,7 +26,7 @@ public class AppConfig {
     private DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        //TODO: opisz ze konfiguracja wymaga zmiany
+        // You can change bellow settings
         dataSource.setUrl("jdbc:mysql://localhost:3306/spring");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
@@ -52,7 +51,6 @@ public class AppConfig {
         return builder.buildSessionFactory();
     }
     
-    //TODO: opisz ze bez managera transakcji bedzie wywalac blad
     @Bean
     @Autowired
     public HibernateTransactionManager transactionManager( SessionFactory pSessionFactory ) {

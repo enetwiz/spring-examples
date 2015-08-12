@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author Mariusz G <mg@netwiz.pl>
  */
-// UWAGA: uzywanie konfiguracji przez anotacje wymaga zainstalowania dodatkowej zaleznosci o nazwie: cglib
 @Configuration
 @ComponentScan("com.enetwiz.helloworld")
 public class AppConfig {
