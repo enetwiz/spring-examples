@@ -45,6 +45,7 @@
         <module>modules/DependencyInjection</module>
         <module>modules/AspectOrientedProgramming</module>
         <module>modules/HibernateUsage</module>
+        <module>modules/HibernateWebUsage</module>
     </modules>
   
     <build>
