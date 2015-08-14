@@ -14,8 +14,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
+import org.thymeleaf.templateresolver.TemplateResolver;
 
 /**
  *
@@ -27,17 +29,35 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan("com.enetwiz.hibernatewebusage")
 public class AppConfig extends WebMvcConfigurerAdapter {
     
+    // Thymeleaf template config
+    private TemplateResolver templateResolver() {
+        TemplateResolver templateResolver = new ServletContextTemplateResolver();
+        templateResolver.setPrefix("/WEB-INF/views/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode("HTML5");
+        
+        return templateResolver;
+    }
+    
+    private SpringTemplateEngine templateEngine() {
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.setTemplateResolver( templateResolver() );
+        
+        return templateEngine;
+    }
+    
     @Bean
     public ViewResolver viewResolver() {
-        
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".jsp");
+        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+        viewResolver.setTemplateEngine( templateEngine() );
+        viewResolver.setOrder(1);
+        //viewResolver.setViewNames( new String[] { "*.html" } );
         
         return viewResolver;
     }
+    // EOF Thymeleaf template config
     
+    // Database > Hibernate + MySQL config
     private DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -71,5 +91,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public HibernateTransactionManager transactionManager( SessionFactory pSessionFactory ) {
        return new HibernateTransactionManager( pSessionFactory );
     }
+    // EOF Database > Hibernate + MySQL config
     
 }
