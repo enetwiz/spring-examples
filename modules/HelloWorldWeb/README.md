@@ -28,6 +28,7 @@ Wymagane zaleznosci
 Aby aplikacja funkcjonowala nalezy zaladowac potrzebne biblioteki, w odpowiednich wersjach:
 
  * spring-context - podstawowa biblioteka kontekstow Springa
+ * spring-webmvc - biblioteka pod-frameworka umozliwiajaca budowanie aplikacji internetowych w ramach wzorca MVC
  * servlet-api - biblioteka odpowiedzialna za wyświetlanie dynamicznych stron WWW (tj. przetwarzanie formularzy, forwarding itp.)
  * jstl - standardowa biblioteka znacznikow Javy ulatwajaca pisanie stron JSP
  * jsp-api - biblioteka odpowiedzialna za parsowanie i obsluge dokumentow zawierajacych znaczniki JavaServer Pages (JSP)
