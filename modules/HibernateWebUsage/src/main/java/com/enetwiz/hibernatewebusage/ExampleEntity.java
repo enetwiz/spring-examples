@@ -1,10 +1,13 @@
 package com.enetwiz.hibernatewebusage;
 
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -21,6 +24,9 @@ public class ExampleEntity {
     @Column(nullable = false, length = 50)
     private String label = null;
     
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created = null;
+    
     
     public int getId() {
         return id;
@@ -32,6 +38,10 @@ public class ExampleEntity {
     
     public void setLabel(String pLabel) {
         label = pLabel;
+    }
+    
+    public Date getCreated() {
+        return created;
     }
     
 }

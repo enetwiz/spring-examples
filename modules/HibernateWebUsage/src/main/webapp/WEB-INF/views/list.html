@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Hibernate in Web environment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h2>List of all entities</h2>
+
+<a href="#" th:href="@{/}">Back to the form</a>
+
+<table border="1">
+    <thead>
+        <tr style="background-color: cornsilk;">
+            <td>Id</td>
+            <td>Label</td>
+            <td>Created</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="entity : ${entities}">
+            <td th:text="${entity.id}">n/a</td>
+            <td th:text="${entity.label}">n/a</td>
+            <td th:text="${entity.created}">n/a</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
