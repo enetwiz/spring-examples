@@ -15,7 +15,7 @@ public class ExampleComponent {
     }
     
     public void doMore() {
-        System.out.println("I do more inside the doMore() and... nothing more happens!");
+        System.out.println("I do more inside the doMore() and... nothing more happens because pointcut is not defined for this method!");
         System.out.println("---");
     }
     
