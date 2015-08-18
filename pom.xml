@@ -46,6 +46,7 @@
         <module>modules/AspectOrientedProgramming</module>
         <module>modules/HibernateUsage</module>
         <module>modules/HibernateWebUsage</module>
+        <module>modules/HibernateRelationship</module>
     </modules>
   
     <build>
