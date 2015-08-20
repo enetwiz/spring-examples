@@ -17,7 +17,7 @@ public class ManyToMany {
         ApplicationContext context = new AnnotationConfigApplicationContext( AppConfig.class );
         
         // Get hibernate active session
-        SessionFactory sessionFactory = (SessionFactory) context.getBean( "sessionFactory" );
+        SessionFactory sessionFactory = context.getBean( SessionFactory.class );
         Session session = sessionFactory.openSession();
         
         session.beginTransaction();
@@ -39,19 +39,21 @@ public class ManyToMany {
         UserEntity guestUser1 = new UserEntity();
         guestUser1.setUsername("GuestUser");
         
-        // Save
+        // Add users to groups
         groupAdmin.addUser( adminUser1 );
         groupAdmin.addUser( adminUser2 );
         groupGuest.addUser( guestUser1 );
-        session.save( groupAdmin );
-        session.save( groupGuest );
+        
+        // Save
+        session.saveOrUpdate( groupAdmin );
+        session.saveOrUpdate( groupGuest );
         
         adminUser1.addGroup( groupAdmin );
         adminUser2.addGroup( groupAdmin );
         guestUser1.addGroup( groupGuest );
-        session.save( adminUser1 );
-        session.save( adminUser2 );
-        session.save( guestUser1 );
+        session.saveOrUpdate( adminUser1 );
+        session.saveOrUpdate( adminUser2 );
+        session.saveOrUpdate( guestUser1 );
         
         session.getTransaction().commit();
         

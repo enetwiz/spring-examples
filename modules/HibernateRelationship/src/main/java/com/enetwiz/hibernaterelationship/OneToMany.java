@@ -17,7 +17,7 @@ public class OneToMany {
         ApplicationContext context = new AnnotationConfigApplicationContext( AppConfig.class );
         
         // Get hibernate active session
-        SessionFactory sessionFactory = (SessionFactory) context.getBean( "sessionFactory" );
+        SessionFactory sessionFactory = context.getBean( SessionFactory.class );
         Session session = sessionFactory.openSession();
         
         session.beginTransaction();
