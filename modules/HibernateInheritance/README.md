@@ -1,0 +1,1 @@
+TODO: hibernate.hbm2ddl.auto w @Configuration

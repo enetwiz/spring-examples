@@ -47,6 +47,7 @@
         <module>modules/HibernateUsage</module>
         <module>modules/HibernateWebUsage</module>
         <module>modules/HibernateRelationship</module>
+        <module>modules/HibernateInheritance</module>
     </modules>
   
     <build>
