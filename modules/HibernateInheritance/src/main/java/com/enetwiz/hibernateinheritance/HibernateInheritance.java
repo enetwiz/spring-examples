@@ -43,6 +43,18 @@ public class HibernateInheritance {
         reptile.setArmor(true);
         session.saveOrUpdate( reptile );
         
+        // Joined inheritance strategy - Create phones
+        Smartphone smartphone = new Smartphone();
+        smartphone.setTouchScreen(true);
+        smartphone.setScreenSize(60);
+        smartphone.setTouchScreen(true);
+        session.saveOrUpdate( smartphone );
+        
+        Cellphone cellphone = new Cellphone();
+        cellphone.setScreenSize(30);
+        cellphone.setKeyboard(true);
+        session.saveOrUpdate( cellphone );
+        
         session.getTransaction().commit();
     }
     
