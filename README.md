@@ -25,4 +25,4 @@ Lista modulow
  * [HibernateUsage](modules/HibernateUsage) - aplikacja pokazujaca przyklad polaczenia ORM'a Hibernate 4.x ze Springiem
  * [HibernateWebUsage](modules/HibernateWebUsage) - aplikacja internetowa pokazujaca przyklad polaczenia ORM'a Hibernate 4.x ze Springiem
  * [HibernateRelationship](modules/HibernateRelationship) - aplikacja pokazujaca przyklad relacji (OneToMany, ManyToMany) miedzy tabelami w bazie danych, w srodowisku Hibernate ORM
- * [HibernateInheritance](modules/HibernateInheritance) - aplikacja pokazujaca rozne strategie w ramach encji (oraz jak odwzorowac dziedziczenie w bazie danych)
+ * [HibernateInheritance](modules/HibernateInheritance) - aplikacja pokazujaca rozne strategie dziedziczenia w ramach encji (tj. jak odwzorowac dziedziczenie w bazie danych)
