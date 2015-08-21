@@ -22,35 +22,35 @@ public class HibernateInheritance {
         session.beginTransaction();
         
         // Single table strategy - create vehicles
-        Truck truck =  new Truck();
+        TruckEntity truck =  new TruckEntity();
         truck.setManufacturer("Toyota");
         truck.setCapacity(10000);
         session.saveOrUpdate( truck );
         
-        Motorcycle motorcycle =  new Motorcycle();
+        MotorcycleEntity motorcycle =  new MotorcycleEntity();
         motorcycle.setManufacturer("Kawasaki");
         motorcycle.setMaxSpeed(350);
         session.saveOrUpdate( motorcycle );
         
         // Table per class strategy - create animals
-        Bird bird = new Bird();
+        BirdEntity bird = new BirdEntity();
         bird.setLegs(2);
         bird.setBeak(true);
         session.saveOrUpdate( bird );
         
-        Reptile reptile = new Reptile();
+        ReptileEntity reptile = new ReptileEntity();
         reptile.setLegs(4);
         reptile.setArmor(true);
         session.saveOrUpdate( reptile );
         
         // Joined inheritance strategy - Create phones
-        Smartphone smartphone = new Smartphone();
+        SmartphoneEntity smartphone = new SmartphoneEntity();
         smartphone.setTouchScreen(true);
         smartphone.setScreenSize(60);
         smartphone.setTouchScreen(true);
         session.saveOrUpdate( smartphone );
         
-        Cellphone cellphone = new Cellphone();
+        CellphoneEntity cellphone = new CellphoneEntity();
         cellphone.setScreenSize(30);
         cellphone.setKeyboard(true);
         session.saveOrUpdate( cellphone );

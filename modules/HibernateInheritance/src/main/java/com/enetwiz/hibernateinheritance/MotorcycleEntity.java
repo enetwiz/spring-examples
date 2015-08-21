@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "motorcycle")
-public class Motorcycle extends Vehicle {
+public class MotorcycleEntity extends VehicleEntity {
     
     @Column
     private int maxSpeed = 0; // in kilometers per hour

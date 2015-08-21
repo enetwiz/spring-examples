@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "smartphone")
-public class Smartphone extends Phone {
+public class SmartphoneEntity extends PhoneEntity {
     
     @Column
     private boolean touchScreen = false;

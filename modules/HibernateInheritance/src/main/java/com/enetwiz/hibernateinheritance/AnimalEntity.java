@@ -14,7 +14,7 @@ import javax.persistence.InheritanceType;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Animal {
+public abstract class AnimalEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)

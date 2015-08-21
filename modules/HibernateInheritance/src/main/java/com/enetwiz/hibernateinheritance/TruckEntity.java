@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "truck")
-public class Truck extends Vehicle {
+public class TruckEntity extends VehicleEntity {
     
     @Column
     private int capacity = 0; // in kilograms

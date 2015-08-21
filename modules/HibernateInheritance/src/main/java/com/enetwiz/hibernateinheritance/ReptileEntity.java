@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "reptile")
-public class Reptile extends Animal {
+public class ReptileEntity extends AnimalEntity {
     
     @Column
     private boolean armor = false;
