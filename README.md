@@ -1,14 +1,22 @@
+O mnie
+============================
+
+Nazywam sie Mariusz i od ok 8 lat jestem programista. W tym czasie zdobylem doswiadczenie w takich technologiach jak PHP (CakePHP, Symfony2), HTML + CSS, JavaScript (jQuery), bazy danych (MySQL, PostgreSQL, Oracle [PL/SQL]), Java (Core Java, Spring, Hibernate, JForex API), Adobe (ActionScript 3.0). 
+Jezeli jestes zainteresowany wspolpraca napisz do mnie: https://pl.linkedin.com/in/mariuszgotlib (aktualnie jestem: ready-to-work)
+
+Jezeli trapi Cie jakis problem rowniez napisz do mnie! - byc moze zamieszcze przyklad jego rozwiazania :).
+
+
 Spring framework - przyklady
 ============================
 
-W ponizszym repozytorium znajduja sie przyklady / code snippety, ktore pozwalaja okreslic poziom moich umiejetnosci / wiedzy dotyczacej 
-popularnego frameworka Spring.
+Glownym zalozeniem tego repozytorium jest prezentacja moich umiejetnosci z zakresu uzycia technologii Spring Framework. Jednakze poza tym stanowi on swietna baze do nauki Spring'a dzieki bogato opisanym przykladom. Poruszam tu wiele popularnych przypadkow uzycia, ktore moga okazac sie przydatne jak rowniez niezbedne do prawidlowego rozumienia zasad dzialania ww technologii. 
 
-Wszystkie wykonane przeze mnie przyklady znajduja sie w katalogu [modules/](modules/) . 
+Przyklady podzielilem na przejrzyste moduly ( patrz katalog [modules/](modules/) ), ktorych pelna liste znajdziesz ponizej. Co wazne - wlozylem sporo wysilku w to, aby mozliwie jak najlepiej opisac dzialanie kazdego z nich. Dlatego mam nadzieje, ze stanie sie to skarbnica wiedzy zarowni dla mnie jak i dla Ciebie.
 
-Pobierajac repozytorium uzyskasz pelnowartosciowy projekt Maven, w ktorym kazdy przyklad stanowi oddzielny modul. Dodatkowo kazdy modul zawiera 
-czesc opisowa, ktora z kolei wyjasnia to w jaki sposob rozumiem dzialanie wybranej funkcjonalnosci frameworka.
+Jezeli jestes programista/programistka pragnacym szybko nauczyc sie Springa polecam rozpoczecie nauki od swietnej ksiazki: ``Spring w akcji`` Craig'a Walls'a, gdyz stanowi ona genialne wprowadzenie do tematyki oraz uzupelnienie moich wlasnych przykladow w czesc teoretyczna. Z kolei jezeli nigdy nie miales/mialas doczynienia z jezykiem JAVA swoja przygode warto rozpoczac od ``Java. Podstawy`` autorstwa: Gary Cornell, Cay S. Horstmann.
 
+Pobierajac repozytorium uzyskasz pelnowartosciowy projekt Maven, w ktorym kazdy przyklad stanowi oddzielny modul. Dodatkowo kazdy modul zawiera czesc opisowa, ktora z kolei doglebnie wyjasnia jak on dziala :).
 
 
 Lista modulow
