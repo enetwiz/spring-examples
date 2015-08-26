@@ -15,6 +15,7 @@ public class BirdEntity extends AnimalEntity {
     @Column
     private boolean beak = false;
     
+    
     public boolean hasBeak() {
         return beak;
     }

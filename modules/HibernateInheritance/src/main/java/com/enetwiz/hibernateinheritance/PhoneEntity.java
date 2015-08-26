@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "phone")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "discriminator")
 public abstract class PhoneEntity {
     
     @Id

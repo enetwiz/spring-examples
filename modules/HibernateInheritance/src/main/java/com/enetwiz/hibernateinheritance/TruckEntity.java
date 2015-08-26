@@ -9,7 +9,6 @@ import javax.persistence.Table;
  * @author Mariusz G <mg@netwiz.pl>
  */
 @Entity
-@Table(name = "truck")
 public class TruckEntity extends VehicleEntity {
     
     @Column
