@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@ComponentScan("com.enetwiz.hibernatetransations")
+@ComponentScan("com.enetwiz.hibernatetransactions")
 public class AppConfig {
     
     private DataSource dataSource() {
@@ -46,7 +46,7 @@ public class AppConfig {
     @Bean
     public SessionFactory sessionFactory() {
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder( dataSource() );
-        builder.scanPackages("com.enetwiz.hibernatetransations")
+        builder.scanPackages("com.enetwiz.hibernatetransactions")
                .addProperties( getHibernateProperties() );
         
         return builder.buildSessionFactory();
@@ -57,12 +57,5 @@ public class AppConfig {
     public HibernateTransactionManager transactionManager( SessionFactory pSessionFactory ) {
        return new HibernateTransactionManager( pSessionFactory );
     }
-    
-    //TODO: opisz w README.md
-//    @Bean
-//    @Autowired
-//    public TransactionTemplate transactionTemplate( HibernateTransactionManager pTransactionManager ) {
-//        return new TransactionTemplate( pTransactionManager );
-//    }
     
 }

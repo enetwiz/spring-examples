@@ -1,8 +1,10 @@
 package com.enetwiz.hibernatetransactions;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 /**
  *
@@ -17,24 +19,43 @@ public class ProgrammicUserRoleService {
     @Autowired
     private UserDAO userDAO = null;
     
+    @Autowired
+    private HibernateTransactionManager transactionManager = null;
     
-    @Transactional
+    
     public void commitedExample( RoleEntity pRoleEntity, UserEntity pUserEntity ) {    
-        roleDAO.save( pRoleEntity ); //TODO: opisz ze kolejnosc jest wazna
-        userDAO.save( pUserEntity );
-    }
-    
-    @Transactional(timeout = 1)
-    public void uncommitedExample( RoleEntity pRoleEntity, UserEntity pUserEntity ) {
-        roleDAO.save( pRoleEntity );
+        // Create new transaction
+        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+        TransactionStatus transactionStatus = transactionManager.getTransaction( transactionDefinition );
         
-        // Add unexpected timeout
-        long currentTimeMillis = System.currentTimeMillis();
-        while( (currentTimeMillis + 1500) > System.currentTimeMillis() ) {
-            // do nothing - just wait
+        try {
+            roleDAO.save( pRoleEntity ); //TODO: opisz ze kolejnosc jest wazna
+            userDAO.save( pUserEntity );
+            transactionManager.commit( transactionStatus );
+        } catch (Exception e) {
+            // Rollback transaction when is caught the exception
+            transactionManager.rollback( transactionStatus );
+            System.err.println( e.getMessage() );
         }
         
-        userDAO.save( pUserEntity );
+    }
+    
+    public void uncommitedExample( RoleEntity pRoleEntity, UserEntity pUserEntity ) {
+        // Create new transaction
+        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+        TransactionStatus transactionStatus = transactionManager.getTransaction( transactionDefinition );
+        
+        try {
+            roleDAO.save( pRoleEntity );
+            userDAO.save( pUserEntity );
+            int test = 1/0; // Force exception for uncommited transaction test
+            transactionManager.commit( transactionStatus );
+        } catch (Exception e) {
+            // Rollback transaction when is caught the exception
+            transactionManager.rollback( transactionStatus );
+            System.err.println( e.getMessage() );
+        }
+        
     }
     
 }
