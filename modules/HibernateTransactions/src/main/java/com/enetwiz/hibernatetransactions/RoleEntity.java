@@ -1,4 +1,4 @@
-package com.enetwiz.hibernatetransations;
+package com.enetwiz.hibernatetransactions;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

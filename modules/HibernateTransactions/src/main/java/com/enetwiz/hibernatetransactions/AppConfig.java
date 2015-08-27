@@ -1,4 +1,4 @@
-package com.enetwiz.hibernatetransations;
+package com.enetwiz.hibernatetransactions;
 
 import java.util.Properties;
 import javax.sql.DataSource;

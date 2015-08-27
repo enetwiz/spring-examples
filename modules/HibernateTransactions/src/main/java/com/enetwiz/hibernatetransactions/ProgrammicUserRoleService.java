@@ -1,4 +1,4 @@
-package com.enetwiz.hibernatetransations;
+package com.enetwiz.hibernatetransactions;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Mariusz G <mg@netwiz.pl>
  */
 @Service
-public class UserRoleService {
+public class ProgrammicUserRoleService {
     
     @Autowired
     private RoleDAO roleDAO = null;

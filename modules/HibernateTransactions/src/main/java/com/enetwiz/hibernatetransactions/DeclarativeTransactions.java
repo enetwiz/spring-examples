@@ -1,4 +1,4 @@
-package com.enetwiz.hibernatetransations;
+package com.enetwiz.hibernatetransactions;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

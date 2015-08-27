@@ -1,4 +1,4 @@
-package com.enetwiz.hibernatetransations;
+package com.enetwiz.hibernatetransactions;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
