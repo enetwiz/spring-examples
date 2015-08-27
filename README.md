@@ -32,5 +32,6 @@ Lista modulow
  * [AspectOrientedProgramming](modules/AspectOrientedProgramming/) - aplikacja pokazuje praktyczne zastosowanie programowania aspektowego z wykorzystaniem AspectJ
  * [HibernateUsage](modules/HibernateUsage) - aplikacja pokazujaca przyklad polaczenia ORM'a Hibernate 4.x ze Springiem
  * [HibernateWebUsage](modules/HibernateWebUsage) - aplikacja internetowa pokazujaca przyklad polaczenia ORM'a Hibernate 4.x ze Springiem
+ * [HibernateTransactions](modules/HibernateTransactions) - aplikacja pokazujaca przyklady roznych rodzajow transakcji z uzyciem Hibernate ORM
  * [HibernateRelationship](modules/HibernateRelationship) - aplikacja pokazujaca przyklad relacji (OneToMany, ManyToMany) miedzy tabelami w bazie danych, w srodowisku Hibernate ORM
  * [HibernateInheritance](modules/HibernateInheritance) - aplikacja pokazujaca rozne strategie dziedziczenia w ramach encji (tj. jak odwzorowac dziedziczenie w bazie danych)
