@@ -13,14 +13,17 @@ public class AppController {
 
     @RequestMapping(value="/", method=RequestMethod.GET)
     public String index() {
-        
         return "index";
     }
     
     @RequestMapping(value="/admin", method=RequestMethod.GET)
-    public String admin() {
-        
+    public String admin() {   
         return "admin";
+    }
+    
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    public String login() {   
+        return "login";
     }
     
 }
