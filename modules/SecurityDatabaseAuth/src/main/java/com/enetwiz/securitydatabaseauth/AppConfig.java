@@ -56,8 +56,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     
     private Properties getHibernateProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.show_sql",   "true");
-        properties.put("hibernate.dialect",    "org.hibernate.dialect.MySQL5Dialect");
+        properties.put("hibernate.show_sql",    "true");
+        properties.put("hibernate.dialect",     "org.hibernate.dialect.MySQL5Dialect");
+        properties.put("hibernate.hbm2ddl.auto","create-drop");
         
         return properties;
     }
