@@ -16,6 +16,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         
         <springframework.version>4.2.0.RELEASE</springframework.version>
+        <springsecurity.version>4.0.2.RELEASE</springsecurity.version>
         <thymeleaf.version>2.1.4.RELEASE</thymeleaf.version><!--Thymeleaf template engine version-->
     </properties>
     
@@ -49,6 +50,7 @@
         <module>modules/HibernateTransactions</module>
         <module>modules/HibernateRelationship</module>
         <module>modules/HibernateInheritance</module>
+        <module>modules/SecurityDatabaseAuth</module>
     </modules>
   
     <build>
