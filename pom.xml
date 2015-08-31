@@ -51,6 +51,7 @@
         <module>modules/HibernateRelationship</module>
         <module>modules/HibernateInheritance</module>
         <module>modules/SecurityDatabaseAuth</module>
+        <module>modules/HelloWorldVaadin</module>
     </modules>
   
     <build>
