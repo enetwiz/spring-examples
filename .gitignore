@@ -4,3 +4,7 @@ nb-configuration.xml
 
 # But not these files..
 target/
+
+# Intellij IDEA - project files
+*.iml
+.idea/
