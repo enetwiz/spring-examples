@@ -33,3 +33,4 @@ Lista modulow
  * [HibernateTransactions](modules/HibernateTransactions) - aplikacja pokazujaca przyklady roznych rodzajow transakcji z uzyciem Hibernate ORM
  * [HibernateRelationship](modules/HibernateRelationship) - aplikacja pokazujaca przyklad relacji (OneToMany, ManyToMany) miedzy tabelami w bazie danych, w srodowisku Hibernate ORM
  * [HibernateInheritance](modules/HibernateInheritance) - aplikacja pokazujaca rozne strategie dziedziczenia w ramach encji (tj. jak odwzorowac dziedziczenie w bazie danych)
+ * [PropertyAccess](modules/PropertyAccess) - aplikacja prezentujaca przyklady dostepu do ustawien zapisanych w plikach *.properties

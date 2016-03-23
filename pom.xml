@@ -53,6 +53,7 @@
         <module>modules/SecurityDatabaseAuth</module>
         <module>modules/HelloWorldVaadin</module>
         <module>modules/VaadinMVP</module>
+        <module>modules/PropertyAccess</module>
     </modules>
   
     <build>
