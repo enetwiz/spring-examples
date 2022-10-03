@@ -1,10 +1,3 @@
-O mnie
-============================
-
-Nazywam sie Mariusz i od ok 8 lat jestem programista. W tym czasie zdobylem doswiadczenie w takich technologiach jak PHP (CakePHP, Symfony2), HTML + CSS, JavaScript (jQuery), bazy danych (MySQL, PostgreSQL, Oracle [PL/SQL]), Java (Core Java, Spring, Hibernate, JForex API), Adobe (ActionScript 3.0). 
-Jezeli trapi Cie jakis problem napisz do mnie! - byc moze zamieszcze przyklad jego rozwiazania :).
-
-
 Spring framework - przyklady
 ============================
 
